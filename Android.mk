@@ -1,3 +1,4 @@
+ifeq ($(call is-vendor-board-platform,QCOM),true)
 LOCAL_PATH := $(call my-dir)
 WFD_DISABLE_PLATFORM_LIST := neo
 
@@ -13,3 +14,4 @@ ifneq ($(TARGET_HAS_LOW_RAM), true)
 include $(call all-makefiles-under, $(LOCAL_PATH))
 endif
 endif
+endif # QCOM Platform
